@@ -16,16 +16,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'fire-ng'`, () => {
+  it(`should have as title 'breaker-log-ng'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('fire-ng');
+    expect(app.title).toEqual('breaker-log-ng');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('fire-ng app is running!');
+    expect(compiled.querySelector('.content span').textContent).toContain('breaker-log-ng app is running!');
   });
 });

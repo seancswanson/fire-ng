@@ -1,0 +1,128 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  max-width: 600px;
+  width: 85vw;
+  margin: 0 auto;
+}
+
+.timestamp {
+  font-size: 11px;
+  opacity: 0.8;
+  margin-bottom: 10px;
+}
+
+mwl-gauge {
+  width: 150px;
+  height: 150px;
+  display: block;
+  padding: 10px;
+
+  .gauge {
+    .dial {
+      stroke: #eee;
+      stroke-width: 2;
+      fill: rgba(0, 0, 0, 0);
+
+    }
+
+    .value {
+      stroke: rgb(47, 227, 255);
+      stroke-width: 2;
+      fill: rgba(0, 0, 0, 0);
+
+    }
+
+    .value-text {
+      fill: rgb(47, 227, 255);
+      font-family: sans-serif;
+      font-weight: bold;
+      font-size: 1em;
+
+    }
+
+    &.three {
+      .gauge {
+        .dial {
+          stroke: #334455;
+          stroke-width: 2;
+
+        }
+
+        .value {
+          stroke: #C9DE3C;
+          stroke-width: 5;
+
+        }
+
+        .value-text {
+          fill: #C9DE3C;
+
+        }
+      }
+    }
+
+  }
+
+}
+
+.observation-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 10px;
+  border: 1px dotted rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+
+  @media (max-width: 400px) {
+    flex-direction: column;
+  }
+}
+
+.conditions-wrapper {
+  flex: 1;
+
+  .temp {
+    padding-bottom: 5px;
+    font-size: 24px;
+    border-bottom: 1px dotted black;
+  }
+
+  .description {
+    padding-top: 5px;
+    font-size: 20px;
+  }
+}
+
+.icon-wrapper {
+  flex: 1;
+  flex-basis: 25%;
+  text-align: center;
+}
+
+.details-wrapper {
+  flex: 1;
+
+  .detail-row {
+    display: flex;
+
+    span {
+      display: block;
+    }
+
+    .metric-name {
+      flex-basis: 100px;
+    }
+
+    .metric-value {
+      font-weight: bold;
+    }
+  }
+}
+
+.map {
+  width: 100%;
+  border-radius: 2px;
+  border: 1px dotted rgba(0, 0, 0, 0.1);
+}
