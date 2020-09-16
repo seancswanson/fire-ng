@@ -9,6 +9,8 @@ import { NavComponent } from './nav/nav.component';
 import { ContentComponent } from './content/content.component';
 import { GaugeModule } from 'angular-gauge';
 import { NgxSpinnerModule } from "ngx-spinner";
+import { LocationFormComponent } from './location-form/location-form.component';
+import { AlertComponent } from './alert/alert.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +18,8 @@ import { NgxSpinnerModule } from "ngx-spinner";
     FooterComponent,
     NavComponent,
     ContentComponent,
+    LocationFormComponent,
+    AlertComponent,
   ],
   imports: [
     BrowserModule,

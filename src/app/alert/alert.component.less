@@ -1,0 +1,44 @@
+:host {
+  position: absolute;
+  background: #ff6961;
+  width: 100vw;
+  top: 65px;
+  left: 0;
+  z-index: 10;
+}
+
+.message-wrapper {
+  display: flex;
+  align-items: center;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 10px 0;
+
+  img {
+    margin-right: 10px;
+    width: 18px;
+  }
+}
+
+.info-wrapper {
+  background: #ffa5a0;
+  padding: 10px 0;
+
+  .info {
+    max-width: 600px;
+    margin: 0 auto;
+
+  }
+}
+
+.info-button {
+  margin-left: 5px;
+  padding: 5px;
+  font-size: 12px;
+  font-weight: bold;
+
+  &:focus {
+    outline: none;
+    border: 1px dotted black;
+  }
+}
