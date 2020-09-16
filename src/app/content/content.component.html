@@ -4,8 +4,7 @@
 </div>
 
 <span class="timestamp">Last updated at {{ dataOb.timestamp | date:'MMM d, y, h:mm:ss a' }}</span>
-<mwl-gauge class="three" [max]="500" [value]="400" [animated]="true" [animationDuration]="1">
-</mwl-gauge>
+
 
 <div class="observation-container">
   <div class="conditions-wrapper">
@@ -43,5 +42,18 @@
     </div>
   </div>
 </div>
+<ngx-spinner bdColor="rgba(51,51,51,0.8)" size="medium" color="#fff" type="ball-scale-multiple">
+  <p style="font-size: 20px; color: white">Loading...</p>
+</ngx-spinner>
+<div class="air-quality-container">
+  <div class="gauge-wrapper">
+    <mwl-gauge class="three" [max]="500" [value]="aqiOb.aqiValue || 0" [animated]="true" [animationDuration]="1">
+    </mwl-gauge>
+    <span class="gauge-label">AQI</span>
+  </div>
+  <span class="air-quality-label">{{ aqiOb.aqiLabel }}</span>
+</div>
+
+
 
 <img class="map" src="{{mapOb.imgSrc}}" alt="">

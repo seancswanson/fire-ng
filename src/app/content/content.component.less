@@ -13,59 +13,35 @@
   margin-bottom: 10px;
 }
 
+.air-quality-container {
+  text-align: center;
+
+  .gauge-wrapper {
+    .gauge-label {
+      position: relative;
+      bottom: 45px;
+      font-size: 22px;
+    }
+  }
+
+  .air-quality-label {
+    position: relative;
+    font-size: 18px;
+    bottom: 35px;
+    font-size: 26px;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+}
+
 mwl-gauge {
   width: 150px;
   height: 150px;
   display: block;
   padding: 10px;
-
-  .gauge {
-    .dial {
-      stroke: #eee;
-      stroke-width: 2;
-      fill: rgba(0, 0, 0, 0);
-
-    }
-
-    .value {
-      stroke: rgb(47, 227, 255);
-      stroke-width: 2;
-      fill: rgba(0, 0, 0, 0);
-
-    }
-
-    .value-text {
-      fill: rgb(47, 227, 255);
-      font-family: sans-serif;
-      font-weight: bold;
-      font-size: 1em;
-
-    }
-
-    &.three {
-      .gauge {
-        .dial {
-          stroke: #334455;
-          stroke-width: 2;
-
-        }
-
-        .value {
-          stroke: #C9DE3C;
-          stroke-width: 5;
-
-        }
-
-        .value-text {
-          fill: #C9DE3C;
-
-        }
-      }
-    }
-
-  }
-
+  margin: 0 auto;
 }
+
 
 .observation-container {
   display: flex;
@@ -74,6 +50,7 @@ mwl-gauge {
   margin-bottom: 10px;
   border: 1px dotted rgba(0, 0, 0, 0.1);
   border-radius: 2px;
+  padding: 0 10px;
 
   @media (max-width: 400px) {
     flex-direction: column;
