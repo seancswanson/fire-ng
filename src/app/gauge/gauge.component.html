@@ -1,0 +1,8 @@
+<div class="air-quality-container">
+  <div class="gauge-wrapper">
+    <mwl-gauge class="three" [max]="500" [value]="aqiOb.aqiValue || 0" [animated]="true" [animationDuration]="1">
+    </mwl-gauge>
+    <span class="gauge-label">AQI</span>
+  </div>
+  <span class="air-quality-label">{{ aqiOb.aqiLabel }}</span>
+</div>

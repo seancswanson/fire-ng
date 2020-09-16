@@ -1,0 +1,54 @@
+.observation-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 10px;
+  border: 1px dotted rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+  padding: 0 10px;
+
+  @media (max-width: 400px) {
+    flex-direction: column;
+  }
+}
+
+.conditions-wrapper {
+  flex: 1;
+
+  .temp {
+    padding-bottom: 5px;
+    font-size: 24px;
+    border-bottom: 1px dotted black;
+  }
+
+  .description {
+    padding-top: 5px;
+    font-size: 20px;
+  }
+}
+
+.icon-wrapper {
+  flex: 1;
+  flex-basis: 25%;
+  text-align: center;
+}
+
+.details-wrapper {
+  flex: 1;
+
+  .detail-row {
+    display: flex;
+
+    span {
+      display: block;
+    }
+
+    .metric-name {
+      flex-basis: 100px;
+    }
+
+    .metric-value {
+      font-weight: bold;
+    }
+  }
+}

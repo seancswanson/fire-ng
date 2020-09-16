@@ -15,6 +15,7 @@ export class AlertComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    console.log('Alert init...')
   }
 
   toggleInfo() {

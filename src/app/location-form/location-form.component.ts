@@ -10,6 +10,7 @@ export class LocationFormComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    console.log('Location Form init...')
   }
 
 }

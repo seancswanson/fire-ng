@@ -11,6 +11,9 @@ import { GaugeModule } from 'angular-gauge';
 import { NgxSpinnerModule } from "ngx-spinner";
 import { LocationFormComponent } from './location-form/location-form.component';
 import { AlertComponent } from './alert/alert.component';
+import { ObservationsComponent } from './observations/observations.component';
+import { GaugeComponent } from './gauge/gauge.component';
+import { MapComponent } from './map/map.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +23,9 @@ import { AlertComponent } from './alert/alert.component';
     ContentComponent,
     LocationFormComponent,
     AlertComponent,
+    ObservationsComponent,
+    GaugeComponent,
+    MapComponent,
   ],
   imports: [
     BrowserModule,

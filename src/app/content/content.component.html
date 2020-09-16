@@ -7,54 +7,12 @@
 
 <span class="timestamp">Last updated at {{ dataOb.dateTimeISO | date:'MMM d, y, h:mm:ss a' }}</span>
 
-
-<div class="observation-container">
-  <div class="conditions-wrapper">
-    <div class="temp">{{ dataOb.tempF || 'calculating'}}<span>&deg;F</span></div>
-    <div class="description">{{ dataOb.weather  || 'calculating' }}</div>
-  </div>
-  <div class="icon-wrapper">
-    <img class="icon" src="{{ 'https://cdn.aerisapi.com/wxblox/icons/' + dataOb.icon || 'na.png' }}">
-  </div>
-  <div class="details-wrapper">
-    <div class="detail-row">
-      <span class="metric-name">Winds: </span>
-      <span class="metric-value">{{dataOb.windSpeedMPH > 0 ? dataOb.windSpeedMPH + 'mph' : 'Calm'}}</span>
-    </div>
-    <div class="detail-row">
-      <span class="metric-name">Dew Point: </span>
-      <span class="metric-value">{{dataOb.dewpointF || 'N/A'}}&deg;F</span>
-    </div>
-    <div class="detail-row">
-      <span class="metric-name">Humidity: </span>
-      <span class="metric-value">{{dataOb.humidity || 'N/A'}}</span>
-    </div>
-    <div class="detail-row">
-      <span class="metric-name">Pressure</span>
-      <span class="metric-value">{{dataOb.pressureIN || 'N/A'}}</span>
-    </div>
-    <div class="detail-row">
-      <span class="metric-name">Visibility: </span>
-      <span class="metric-value">{{dataOb.visibilityMI || 'N/A'}}</span>
-    </div>
-    <div class="detail-row">
-      <span class="metric-name">Sky Cover:</span>
-      <span class="metric-value">{{dataOb.sky + '%' || 'N/A'}}</span>
-    </div>
-  </div>
-</div>
 <ngx-spinner bdColor="rgba(51,51,51,0.8)" size="medium" color="#fff" type="ball-scale-multiple">
   <p style="font-size: 20px; color: white">Loading...</p>
 </ngx-spinner>
-<div class="air-quality-container">
-  <div class="gauge-wrapper">
-    <mwl-gauge class="three" [max]="500" [value]="aqiOb.aqiValue || 0" [animated]="true" [animationDuration]="1">
-    </mwl-gauge>
-    <span class="gauge-label">AQI</span>
-  </div>
-  <span class="air-quality-label">{{ aqiOb.aqiLabel }}</span>
-</div>
+
+<app-observations [dataOb]="dataOb"></app-observations>
+<app-gauge [aqiOb]="aqiOb"></app-gauge>
 
 
-
-<img class="map" src="{{mapOb.imgSrc}}" alt="">
+<app-map [mapOb]="mapOb"></app-map>

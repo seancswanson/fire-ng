@@ -26,8 +26,8 @@ export class ContentComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    console.log('Content init...')
     this.spinner.show();
-
   }
 
   getObservations() {
@@ -60,7 +60,6 @@ export class ContentComponent implements OnInit {
         this.mapOb.imgSrc = image.src
       }
       this.spinner.hide();
-
     }
     );
   }
