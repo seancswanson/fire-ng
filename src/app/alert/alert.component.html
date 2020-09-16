@@ -1,8 +1,9 @@
-  <div class="alert">
+  <div *ngIf="visible" class="alert">
     <div class="message-wrapper"> <img src="../assets/info-icon.png" alt=""> {{ alertType | titlecase}} in effect...
-      <button class="info-button" (click)="toggleInfo()">{{ infoShown ? 'Collapse Info' : 'SHOW INFO'}}</button>
+      <button class="button" (click)="toggleInfo()">{{ infoShown ? 'Collapse Info' : 'Show Info'}}</button>
     </div>
     <div *ngIf="infoShown" class="info-wrapper">
+      <button class="button" (click)="clearAlert()">Clear alert</button>
       <div class="info">{{alertBody}}</div>
     </div>
   </div>

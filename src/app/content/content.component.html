@@ -5,7 +5,7 @@
   <h2 class="app-section-title">Weather Info for Seattle, WA</h2>
 </div>
 
-<span class="timestamp">Last updated at {{ dataOb.timestamp | date:'MMM d, y, h:mm:ss a' }}</span>
+<span class="timestamp">Last updated at {{ dataOb.dateTimeISO | date:'MMM d, y, h:mm:ss a' }}</span>
 
 
 <div class="observation-container">
@@ -15,7 +15,6 @@
   </div>
   <div class="icon-wrapper">
     <img class="icon" src="{{ 'https://cdn.aerisapi.com/wxblox/icons/' + dataOb.icon || 'na.png' }}">
-
   </div>
   <div class="details-wrapper">
     <div class="detail-row">
