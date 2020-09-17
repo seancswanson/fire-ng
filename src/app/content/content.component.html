@@ -1,6 +1,6 @@
 <app-alert [alertType]="alertOb.name" [alertBody]="alertOb.body"></app-alert>
-<app-location-form>
-</app-location-form>
+<!-- <app-location-form>
+</app-location-form> -->
 <div class="app-section-header">
   <h2 class="app-section-title">Weather Info for Seattle, WA</h2>
 </div>
@@ -12,7 +12,7 @@
 </ngx-spinner>
 
 <app-observations [dataOb]="dataOb"></app-observations>
-<app-gauge [aqiOb]="aqiOb"></app-gauge>
 
+<app-gauge [aqiOb]="aqiOb"></app-gauge>
 
 <app-map [mapOb]="mapOb"></app-map>

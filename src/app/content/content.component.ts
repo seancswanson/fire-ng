@@ -22,7 +22,6 @@ export class ContentComponent implements OnInit {
     this.getAirQuality();
     this.getAlerts();
     this.getMap();
-
   }
 
   ngOnInit(): void {
@@ -42,7 +41,8 @@ export class ContentComponent implements OnInit {
       console.log(result.data[0].periods[0])
       this.aqiOb = {
         aqiValue: result.data[0].periods[0].aqi,
-        aqiLabel: result.data[0].periods[0].category
+        aqiLabel: result.data[0].periods[0].category,
+        aqiTimestamp: result.data[0].periods[0].dateTimeISO
       }
     });
   }
